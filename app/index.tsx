@@ -5,10 +5,10 @@ import { StatusBar } from "expo-status-bar";
 export default function Index() {
   return (
     <View className="flex-1 items-center justify-center bg-white">
-      <Text>YOOOOOOOOO</Text>
-      <Link href="/profile" style={{ color: "pink" }}>
+      <Text className="text-3xl">YOOOOOOOOO</Text>
+      <Link href="./(tabs)/home" style={{ color: "pink" }}>
         {" "}
-        Go to profile{" "}
+        Go to Home{" "}
       </Link>
     </View>
   );
