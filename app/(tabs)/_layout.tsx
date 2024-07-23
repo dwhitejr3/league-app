@@ -3,10 +3,10 @@ import React from "react";
 import { Tabs, Redirect } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-const TabIcon = ({ name, size }) => {
+const TabIcon = ({ name, size, color }) => {
   return (
     <View>
-      <Ionicons name={name} size={size} />
+      <Ionicons name={name} size={size} color={color} />
     </View>
   );
 };
@@ -14,14 +14,25 @@ const TabIcon = ({ name, size }) => {
 const TabsLayout = () => {
   return (
     <>
-      <Tabs>
+      <Tabs
+        screenOptions={{
+          //   tabBarShowLabel: false,
+          tabBarActiveTintColor: "#00FF00",
+          tabBarInactiveTintColor: "#FFFFFF",
+          tabBarStyle: {
+            backgroundColor: "#000000",
+            borderTopWidth: 2,
+            borderTopColor: "#00FF00",
+          },
+        }}
+      >
         <Tabs.Screen
           name="home"
           options={{
             title: "Home",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon name="home" size={20} />
+              <TabIcon name="home" size={20} color={"white"} />
             ),
           }}
         />
@@ -32,7 +43,7 @@ const TabsLayout = () => {
             title: "Stats",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon name="stats-chart" size={20} />
+              <TabIcon name="stats-chart" size={20} color={"white"} />
             ),
           }}
         />
@@ -42,7 +53,7 @@ const TabsLayout = () => {
             title: "Player Card",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon name="person" size={20} />
+              <TabIcon name="person" size={20} color={"white"} />
             ),
           }}
         />
@@ -52,7 +63,7 @@ const TabsLayout = () => {
             title: "Schedule",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon name="calendar" size={20} />
+              <TabIcon name="calendar" size={20} color={"white"} />
             ),
           }}
         />
@@ -62,7 +73,7 @@ const TabsLayout = () => {
             title: "Standings",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon name="trending-up-outline" size={20} />
+              <TabIcon name="trending-up-outline" size={20} color={"white"} />
             ),
           }}
         />
@@ -72,7 +83,7 @@ const TabsLayout = () => {
             title: "Award Races",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon name="trophy" size={20} />
+              <TabIcon name="trophy" size={20} color={"white"} />
             ),
           }}
         />

@@ -1,15 +1,20 @@
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { Link } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-3xl">YOOOOOOOOO</Text>
-      <Link href="./(tabs)/home" style={{ color: "pink" }}>
-        {" "}
-        Go to Home{" "}
-      </Link>
-    </View>
+    <SafeAreaView className="h-full bg-black">
+      <ScrollView contentContainerStyle={{ height: "100%" }}>
+        <View className="flex-1 items-center justify-center w-full">
+          <Text className="text-3xl color-white">The League App</Text>
+          <Link href="./(tabs)/home" style={{ color: "#00FF00" }}>
+            {" "}
+            Enter{" "}
+          </Link>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }

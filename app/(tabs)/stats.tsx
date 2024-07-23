@@ -1,11 +1,14 @@
-import { View, Text } from "react-native";
+import { SafeAreaView, View, ScrollView, Text } from "react-native";
 import React from "react";
+import CardItem from "@/components/card/CardItem";
 
 const Stats = () => {
   return (
-    <View>
-      <Text>stats</Text>
-    </View>
+    <SafeAreaView className="h-full bg-black">
+      <ScrollView contentContainerStyle={{ height: "100%" }}>
+        <CardItem />
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
