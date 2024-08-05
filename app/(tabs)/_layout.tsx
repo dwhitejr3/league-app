@@ -3,6 +3,7 @@ import React from "react";
 import { Tabs, Redirect } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
+// Creating the icons from Ionicons
 const TabIcon = ({ name, size, color }) => {
   return (
     <View>
@@ -11,6 +12,7 @@ const TabIcon = ({ name, size, color }) => {
   );
 };
 
+// creating the tab layouts
 const TabsLayout = () => {
   return (
     <>

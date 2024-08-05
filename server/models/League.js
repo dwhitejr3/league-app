@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config.js/connection');
 
+// creating a model for the Leagues
 class League extends Model {}
 
 League.init(
@@ -23,5 +24,12 @@ League.init(
                 key: 'id'
             } 
         }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'league',
     }
 )

@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config.js/connection');
 
+// Creating a model for the teams
 class Team extends Model {}
 
 Team.init(
@@ -19,7 +20,7 @@ Team.init(
             type: DataTypes.INTEGER,
             allowNull:false
         },
-        loses: {
+        losses: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
